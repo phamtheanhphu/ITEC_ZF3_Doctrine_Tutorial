@@ -1,0 +1,9 @@
+<?php if (isset($users)): ?>
+    <h1>Danh sách các người dùng:</h1>
+    <ul>
+        <?php foreach ($users as $user): ?>
+            <li><?= $user->getProfile()->getFullname(); ?></li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php endif; ?>
