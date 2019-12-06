@@ -1,6 +1,8 @@
 .vagrant/
 vendor/
+.idea/
 config/development.config.php
 data/cache/*
 !data/cache/.gitkeep
+!data/DoctrineORMModule/Migrations/.gitkeep
 phpunit.xml

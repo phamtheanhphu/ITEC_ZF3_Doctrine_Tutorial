@@ -11,5 +11,23 @@
  * credentials from accidentally being committed into version control.
  */
 
+use Doctrine\DBAL\Driver\PDOMySql\Driver as PDOMySqlDriver;
+
 return [
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'driverClass' => PDOMySqlDriver::class,
+                'params' => [
+                    'host' => 'localhost',
+                    'user' => 'root',
+                    'password' => '',
+                    'dbname' => 'itec_zf3_doctrine_tutorial',
+                    'driverOptions' => array(
+                        \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+                    )
+                ]
+            ],
+        ],
+    ],
 ];
